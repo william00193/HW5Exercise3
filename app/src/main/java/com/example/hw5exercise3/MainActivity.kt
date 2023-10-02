@@ -18,18 +18,17 @@ import com.google.android.material.snackbar.Snackbar
 
 
 
-
-
 //Naming the Tag as 'MainActivty'
 private const val TAG = "MainActivity"
 
 
 class MainActivity : AppCompatActivity() {
 
-    var questionCount = 1
 
     //Giving a name to my ViewModel that will be referenced from another page later
     private val quizViewModel: QuizViewModel by viewModels()
+
+
     private lateinit var binding: ActivityMainBinding
 
     private val cheatLauncher = registerForActivityResult(
