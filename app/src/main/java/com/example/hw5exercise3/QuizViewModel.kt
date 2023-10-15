@@ -47,20 +47,20 @@ class QuizViewModel(private val savedStateHandle: SavedStateHandle): ViewModel()
         set(value) = savedStateHandle.set(CURRENT_INDEX_KEY, value)
 
 
-    //Defining currentQuestionAnswer index as True/False
+ //Defining currentQuestionAnswer index as True/False
 //Getting this variable from current index of question banks answer section
     val currentQuestionAnswer: Boolean
         get() = questionBank[currentIndex].answer
 
 
-    //Defining currentQuestionText as an integer
+//Defining currentQuestionText as an integer
 //Getting this variable from the current index of question banks Text section
     val currentQuestionText: Int
         get() = questionBank[currentIndex].textResId
 
 
 
-    //Saving the savedStateHandle for IS_CHEATER_KEY
+//Saving the savedStateHandle for IS_CHEATER_KEY
     var isCheater: Boolean
         get() = savedStateHandle.get(IS_CHEATER_KEY) ?: false
         set(value) = savedStateHandle.set(IS_CHEATER_KEY, value)
